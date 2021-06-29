@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CFFFBD"
+    tools:context=".Decibels">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:layout_marginTop="64dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/inputPowerText1"
+            android:layout_width="325dp"
+            android:layout_height="60dp"
+            android:ems="3"
+            android:foregroundGravity="center"
+            android:gravity="end"
+            android:maxLength="21"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.258" />
+
+        <CheckBox
+            android:id="@+id/checkBoxPower1"
+            android:onClick="onClickCheckbox1"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:layout_marginTop="8dp"
+            android:scaleX="3"
+            android:scaleY="3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputPowerText1"
+            app:layout_constraintVertical_bias="0.521" />
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="140dp"
+            android:layout_height="61dp"
+            android:layout_marginStart="116dp"
+            android:layout_marginBottom="8dp"
+            android:scrollbarSize="36sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/buttonPower"
+        android:onClick="onClickPowerButton"
+        android:layout_width="180dp"
+        android:textColor="#FFFFFF"
+        android:background="@drawable/rectbutton"
+        android:layout_height="64dp"
+        android:text="POWER"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/buttonVoltage"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonVoltage"
+        android:onClick="onClickVoltageButton"
+        android:background="@drawable/rectbutton"
+        android:layout_width="180dp"
+        android:textColor="#FFFFFF"
+        android:layout_height="64dp"
+        android:text="VOLTAGE"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/buttonPower"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+        <EditText
+            android:id="@+id/inputPowerText2"
+            android:layout_width="325dp"
+            android:layout_height="60dp"
+            android:ems="3"
+            android:foregroundGravity="center"
+            android:gravity="end"
+            android:maxLength="5"
+            android:singleLine="true"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.258" />
+
+        <CheckBox
+            android:id="@+id/checkBoxPower2"
+            android:onClick="onClickCheckbox2"
+            android:layout_width="58dp"
+            android:layout_height="58dp"
+            android:scaleX="3"
+            android:scaleY="3"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputPowerText2" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="116dp"
+            android:layout_height="55dp"
+            android:text="dBm"
+            android:textAlignment="center"
+            android:textColor="#000000"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/checkBoxPower2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/inputPowerText2"
+            app:layout_constraintVertical_bias="0.558" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <Button
+        android:id="@+id/buttonCalculate"
+        android:layout_width="143dp"
+        android:layout_height="55dp"
+        android:layout_marginBottom="84dp"
+        android:background="@drawable/circlebutton"
+        android:onClick="onClickCalculate"
+        android:text="Calculate"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

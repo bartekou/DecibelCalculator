@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Decibel Calculator</string>
+    <string-array name="PowerValues">
+        <item>pW</item>
+        <item>nW</item>
+        <item>uW</item>
+        <item>mW</item>
+        <item>W</item>
+        <item>kW</item>
+        <item>MW</item>
+    </string-array>
+    <string-array name="VoltageValues">
+        <item>pV</item>
+        <item>nV</item>
+        <item>uV</item>
+        <item>mV</item>
+        <item>V</item>
+        <item>kV</item>
+        <item>MV</item>
+    </string-array>
+    <string-array name="WavelengthValues">
+        <item>m</item>
+        <item>cm</item>
+    </string-array>
+    <string-array name="FrequencyValues">
+        <item>Hz</item>
+        <item>kHz</item>
+        <item>MHz</item>
+        <item>GHz</item>
+    </string-array>
+</resources>
